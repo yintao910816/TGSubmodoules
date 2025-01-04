@@ -144,8 +144,13 @@ Pod::Spec.new do |spec|
   end
 
   spec.subspec 'UIKitRuntimeUtils' do |ss|
-    ss.source_files = 'Classes/UIKitRuntimeUtils/**/*.swift'
+    ss.source_files = 'Classes/UIKitRuntimeUtils/**/*.{h,m}'
     ss.public_header_files = 'Classes/UIKitRuntimeUtils/PublicHeaders/*.h'
+  end
+
+  spec.subspec 'MurMurHash32' do |ss|
+    ss.source_files = 'Classes/MurMurHash32/**/*.{h,m}'
+    ss.public_header_files = 'Classes/MurMurHash32/PublicHeaders/*.h'
   end
 
 end

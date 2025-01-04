@@ -6,6 +6,7 @@ target 'TGSubmodoulesDemo' do
 
 #  pod 'TGSubmodoules/Display', :path => '../'
 #  pod 'TGSubmodoules/PresentationData', :path => '../'
+#  pod 'TGSubmodoules/UIKitRuntimeUtils', :path => '../'
   pod 'TGSubmodoules', :path => '../'
 
 end
