@@ -12,7 +12,6 @@
 		1839A41E2D28D6E0005C8823 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 1839A41D2D28D6E0005C8823 /* Base */; };
 		1839A4202D28D6E2005C8823 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1839A41F2D28D6E2005C8823 /* Assets.xcassets */; };
 		1839A4232D28D6E2005C8823 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 1839A4222D28D6E2005C8823 /* Base */; };
-		1839A4402D28F956005C8823 /* MurMurHash32.m in Sources */ = {isa = PBXBuildFile; fileRef = 1839A43D2D28F956005C8823 /* MurMurHash32.m */; };
 		835D7983170CD3AB938E939A /* Pods_TGSubmodoulesDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B90D8FFD9345BABA78061B5 /* Pods_TGSubmodoulesDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,8 +25,6 @@
 		1839A41F2D28D6E2005C8823 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1839A4222D28D6E2005C8823 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1839A4242D28D6E2005C8823 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1839A43B2D28F956005C8823 /* MurMurHash32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MurMurHash32.h; sourceTree = "<group>"; };
-		1839A43D2D28F956005C8823 /* MurMurHash32.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MurMurHash32.m; sourceTree = "<group>"; };
 		6E29FCF002530D143EE92E31 /* Pods-TGSubmodoulesDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TGSubmodoulesDemo.release.xcconfig"; path = "Target Support Files/Pods-TGSubmodoulesDemo/Pods-TGSubmodoulesDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -46,7 +43,6 @@
 		1839A40A2D28D6DF005C8823 = {
 			isa = PBXGroup;
 			children = (
-				1839A43F2D28F956005C8823 /* MurMurHash32 */,
 				1839A4152D28D6E0005C8823 /* TGSubmodoulesDemo */,
 				1839A4142D28D6E0005C8823 /* Products */,
 				2EFA8A452C1747F868883B2F /* Pods */,
@@ -73,32 +69,6 @@
 				1839A4242D28D6E2005C8823 /* Info.plist */,
 			);
 			path = TGSubmodoulesDemo;
-			sourceTree = "<group>";
-		};
-		1839A43C2D28F956005C8823 /* PublicHeaders */ = {
-			isa = PBXGroup;
-			children = (
-				1839A43B2D28F956005C8823 /* MurMurHash32.h */,
-			);
-			path = PublicHeaders;
-			sourceTree = "<group>";
-		};
-		1839A43E2D28F956005C8823 /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				1839A43D2D28F956005C8823 /* MurMurHash32.m */,
-			);
-			path = Sources;
-			sourceTree = "<group>";
-		};
-		1839A43F2D28F956005C8823 /* MurMurHash32 */ = {
-			isa = PBXGroup;
-			children = (
-				1839A43C2D28F956005C8823 /* PublicHeaders */,
-				1839A43E2D28F956005C8823 /* Sources */,
-			);
-			name = MurMurHash32;
-			path = ../Classes/MurMurHash32;
 			sourceTree = "<group>";
 		};
 		2EFA8A452C1747F868883B2F /* Pods */ = {
@@ -234,7 +204,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1839A41B2D28D6E0005C8823 /* ViewController.swift in Sources */,
-				1839A4402D28F956005C8823 /* MurMurHash32.m in Sources */,
 				1839A4172D28D6E0005C8823 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
