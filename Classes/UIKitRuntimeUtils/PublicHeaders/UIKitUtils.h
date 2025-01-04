@@ -23,4 +23,10 @@ void applySmoothRoundedCornersImpl(CALayer * _Nonnull layer);
 
 @end
 
-UIView<UIKitPortalViewProtocol> * _Nullable makePortalView();
+UIView<UIKitPortalViewProtocol> * _Nullable makePortalView(bool matchPosition);
+
+NSObject * _Nullable makeBlurFilter();
+NSObject * _Nullable makeLuminanceToAlphaFilter();
+
+void setLayerDisableScreenshots(CALayer * _Nonnull layer, bool disableScreenshots);
+void setLayerContentsMaskMode(CALayer * _Nonnull layer, bool maskMode);

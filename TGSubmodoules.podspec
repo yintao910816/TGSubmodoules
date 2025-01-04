@@ -141,23 +141,31 @@ Pod::Spec.new do |spec|
     ss.frameworks = "CoreGraphics", "CoreText", "CoreMedia", "QuartzCore", "UIKit", "Foundation"
   end
 
-  spec.subspec 'PresentationData' do |ss|
-    ss.source_files = 'Classes/PresentationData/*.swift'
-  end
-
-  spec.subspec 'UIKitRuntimeUtils' do |ss|
-    ss.source_files = 'Classes/UIKitRuntimeUtils/**/*.{h,m}'
-    ss.public_header_files = 'Classes/UIKitRuntimeUtils/PublicHeaders/*.h'
-  end
-
-  spec.subspec 'MurMurHash32' do |ss|
-    ss.source_files = 'Classes/MurMurHash32/**/*.{h,m}'
-    ss.public_header_files = 'Classes/MurMurHash32/PublicHeaders/*.h'
-  end
-
-  spec.subspec 'Display' do |ss|
-    ss.source_files = 'Classes/Display/*.swift'
-    ss.dependency 'TGSubmodoules/AsyncDisplayKit'
-  end
+#  spec.subspec 'PresentationData' do |ss|
+#    ss.source_files = 'Classes/PresentationData/*.swift'
+#  end
+#  
+#  spec.subspec 'MurMurHash32' do |ss|
+#    ss.source_files = 'Classes/MurMurHash32/**/*.{h,m}'
+#    ss.public_header_files = 'Classes/MurMurHash32/PublicHeaders/*.h'
+#  end
+#
+#  spec.subspec 'Display' do |ss|
+#    ss.source_files = 'Classes/Display/*.swift'
+#    ss.dependency 'TGSubmodoules/AsyncDisplayKit'
+#  end
+#
+#  spec.subspec 'ObjCRuntimeUtils' do |ss|
+#    ss.source_files = 'Classes/ObjCRuntimeUtils/**/*.{h,m}'
+#    ss.public_header_files = 'Classes/ObjCRuntimeUtils/PublicHeaders/*.h'
+#  end
+#
+#  spec.subspec 'UIKitRuntimeUtils' do |ss|
+#    ss.source_files = 'Classes/UIKitRuntimeUtils/**/*.{h,m}'
+#    ss.public_header_files = 'Classes/UIKitRuntimeUtils/PublicHeaders/*.h'
+#    ss.dependency 'TGSubmodoules/AsyncDisplayKit'
+#    ss.dependency 'TGSubmodoules/ObjCRuntimeUtils'
+#
+#  end
 
 end
