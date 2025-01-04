@@ -13,6 +13,7 @@
 		1839A4202D28D6E2005C8823 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1839A41F2D28D6E2005C8823 /* Assets.xcassets */; };
 		1839A4232D28D6E2005C8823 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 1839A4222D28D6E2005C8823 /* Base */; };
 		1839A4312D28E397005C8823 /* NativeWindowHostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1839A42E2D28E397005C8823 /* NativeWindowHostView.swift */; };
+		1839A4342D28E571005C8823 /* PresentationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1839A4322D28E571005C8823 /* PresentationData.swift */; };
 		835D7983170CD3AB938E939A /* Pods_TGSubmodoulesDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B90D8FFD9345BABA78061B5 /* Pods_TGSubmodoulesDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		1839A4222D28D6E2005C8823 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1839A4242D28D6E2005C8823 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1839A42E2D28E397005C8823 /* NativeWindowHostView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeWindowHostView.swift; sourceTree = "<group>"; };
+		1839A4322D28E571005C8823 /* PresentationData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationData.swift; sourceTree = "<group>"; };
 		6E29FCF002530D143EE92E31 /* Pods-TGSubmodoulesDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TGSubmodoulesDemo.release.xcconfig"; path = "Target Support Files/Pods-TGSubmodoulesDemo/Pods-TGSubmodoulesDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,10 +87,19 @@
 		1839A4302D28E397005C8823 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				1839A4332D28E571005C8823 /* PresentationData */,
 				1839A42F2D28E397005C8823 /* Display */,
 			);
 			name = Classes;
 			path = ../Classes;
+			sourceTree = "<group>";
+		};
+		1839A4332D28E571005C8823 /* PresentationData */ = {
+			isa = PBXGroup;
+			children = (
+				1839A4322D28E571005C8823 /* PresentationData.swift */,
+			);
+			path = PresentationData;
 			sourceTree = "<group>";
 		};
 		2EFA8A452C1747F868883B2F /* Pods */ = {
@@ -208,6 +219,7 @@
 				1839A41B2D28D6E0005C8823 /* ViewController.swift in Sources */,
 				1839A4312D28E397005C8823 /* NativeWindowHostView.swift in Sources */,
 				1839A4172D28D6E0005C8823 /* AppDelegate.swift in Sources */,
+				1839A4342D28E571005C8823 /* PresentationData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

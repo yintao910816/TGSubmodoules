@@ -135,8 +135,12 @@ Pod::Spec.new do |spec|
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # spec.dependency "JSONKit", "~> 1.4"
 
-  spec.subspec 'Display' do |display|
-    display.source_files = 'Classes/Display/*.swift'
+  spec.subspec 'Display' do |ss|
+    ss.source_files = 'Classes/Display/*.swift'
+  end
+
+  spec.subspec 'PresentationData' do |ss|
+    ss.source_files = 'Classes/PresentationData/*.swift'
   end
 
 end
