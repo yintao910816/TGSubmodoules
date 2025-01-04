@@ -135,6 +135,12 @@ Pod::Spec.new do |spec|
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # spec.dependency "JSONKit", "~> 1.4"
 
+  spec.subspec 'AsyncDisplayKit' do |ss|
+    ss.source_files = 'Classes/AsyncDisplayKit/**/*.{h,m}'
+    ss.public_header_files = 'Classes/AsyncDisplayKit/PublicHeaders/*.h'
+    ss.frameworks = "CoreGraphics", "CoreText", "CoreMedia", "QuartzCore", "UIKit", "Foundation"
+  end
+
   spec.subspec 'PresentationData' do |ss|
     ss.source_files = 'Classes/PresentationData/*.swift'
   end
@@ -151,7 +157,7 @@ Pod::Spec.new do |spec|
 
   spec.subspec 'Display' do |ss|
     ss.source_files = 'Classes/Display/*.swift'
-    ss.dependency 'TGSubmodoules/MurMurHash32'
+    ss.dependency 'TGSubmodoules/AsyncDisplayKit'
   end
 
 end

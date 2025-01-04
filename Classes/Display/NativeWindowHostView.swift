@@ -1,6 +1,6 @@
 //import Foundation
 //import UIKit
-//import SwiftSignalKit
+////import SwiftSignalKit
 //
 //private let orientationChangeDuration: Double = UIDevice.current.userInterfaceIdiom == .pad ? 0.4 : 0.3
 //
@@ -458,10 +458,3 @@
 //    
 //    return (window, hostView)
 //}
-
-public class TestC {
-    
-    public static func printTest() {
-        print("测试")
-    }
-}
