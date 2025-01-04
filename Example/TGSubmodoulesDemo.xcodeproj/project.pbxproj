@@ -12,8 +12,6 @@
 		1839A41E2D28D6E0005C8823 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 1839A41D2D28D6E0005C8823 /* Base */; };
 		1839A4202D28D6E2005C8823 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1839A41F2D28D6E2005C8823 /* Assets.xcassets */; };
 		1839A4232D28D6E2005C8823 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 1839A4222D28D6E2005C8823 /* Base */; };
-		1839A4312D28E397005C8823 /* NativeWindowHostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1839A42E2D28E397005C8823 /* NativeWindowHostView.swift */; };
-		1839A4342D28E571005C8823 /* PresentationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1839A4322D28E571005C8823 /* PresentationData.swift */; };
 		835D7983170CD3AB938E939A /* Pods_TGSubmodoulesDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B90D8FFD9345BABA78061B5 /* Pods_TGSubmodoulesDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,8 +25,6 @@
 		1839A41F2D28D6E2005C8823 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1839A4222D28D6E2005C8823 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1839A4242D28D6E2005C8823 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1839A42E2D28E397005C8823 /* NativeWindowHostView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeWindowHostView.swift; sourceTree = "<group>"; };
-		1839A4322D28E571005C8823 /* PresentationData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationData.swift; sourceTree = "<group>"; };
 		6E29FCF002530D143EE92E31 /* Pods-TGSubmodoulesDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TGSubmodoulesDemo.release.xcconfig"; path = "Target Support Files/Pods-TGSubmodoulesDemo/Pods-TGSubmodoulesDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -47,7 +43,6 @@
 		1839A40A2D28D6DF005C8823 = {
 			isa = PBXGroup;
 			children = (
-				1839A4302D28E397005C8823 /* Classes */,
 				1839A4152D28D6E0005C8823 /* TGSubmodoulesDemo */,
 				1839A4142D28D6E0005C8823 /* Products */,
 				2EFA8A452C1747F868883B2F /* Pods */,
@@ -74,32 +69,6 @@
 				1839A4242D28D6E2005C8823 /* Info.plist */,
 			);
 			path = TGSubmodoulesDemo;
-			sourceTree = "<group>";
-		};
-		1839A42F2D28E397005C8823 /* Display */ = {
-			isa = PBXGroup;
-			children = (
-				1839A42E2D28E397005C8823 /* NativeWindowHostView.swift */,
-			);
-			path = Display;
-			sourceTree = "<group>";
-		};
-		1839A4302D28E397005C8823 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				1839A4332D28E571005C8823 /* PresentationData */,
-				1839A42F2D28E397005C8823 /* Display */,
-			);
-			name = Classes;
-			path = ../Classes;
-			sourceTree = "<group>";
-		};
-		1839A4332D28E571005C8823 /* PresentationData */ = {
-			isa = PBXGroup;
-			children = (
-				1839A4322D28E571005C8823 /* PresentationData.swift */,
-			);
-			path = PresentationData;
 			sourceTree = "<group>";
 		};
 		2EFA8A452C1747F868883B2F /* Pods */ = {
@@ -130,6 +99,7 @@
 				1839A40F2D28D6DF005C8823 /* Sources */,
 				1839A4102D28D6DF005C8823 /* Frameworks */,
 				1839A4112D28D6DF005C8823 /* Resources */,
+				E3FB37228F3CE0E4137E214D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -209,6 +179,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E3FB37228F3CE0E4137E214D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TGSubmodoulesDemo/Pods-TGSubmodoulesDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TGSubmodoulesDemo/Pods-TGSubmodoulesDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TGSubmodoulesDemo/Pods-TGSubmodoulesDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -217,9 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1839A41B2D28D6E0005C8823 /* ViewController.swift in Sources */,
-				1839A4312D28E397005C8823 /* NativeWindowHostView.swift in Sources */,
 				1839A4172D28D6E0005C8823 /* AppDelegate.swift in Sources */,
-				1839A4342D28E571005C8823 /* PresentationData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,7 +267,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -345,7 +330,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

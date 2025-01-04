@@ -4,4 +4,8 @@ target 'TGSubmodoulesDemo' do
 
   use_frameworks!
 
+#  pod 'TGSubmodoules/Display', :path => '../'
+#  pod 'TGSubmodoules/PresentationData', :path => '../'
+  pod 'TGSubmodoules', :path => '../'
+
 end

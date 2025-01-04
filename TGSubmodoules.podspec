@@ -143,4 +143,9 @@ Pod::Spec.new do |spec|
     ss.source_files = 'Classes/PresentationData/*.swift'
   end
 
+  spec.subspec 'UIKitRuntimeUtils' do |ss|
+    ss.source_files = 'Classes/UIKitRuntimeUtils/**/*.swift'
+    ss.public_header_files = 'Classes/UIKitRuntimeUtils/PublicHeaders/*.h'
+  end
+
 end
