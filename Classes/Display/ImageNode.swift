@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-import TGSwiftSignalKit
+import SwiftSignalKitTG
 
 public let displayLinkDispatcher = DisplayLinkDispatcher()
 private let dispatcher = displayLinkDispatcher

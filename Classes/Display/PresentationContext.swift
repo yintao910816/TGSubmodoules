@@ -1,5 +1,5 @@
 import UIKit
-import TGSwiftSignalKit
+import SwiftSignalKitTG
 
 public struct PresentationSurfaceLevel: RawRepresentable {
     public var rawValue: Int32

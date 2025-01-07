@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "TGSubmodoules"
-  spec.version      = "1.0.1"
+  spec.version      = "1.1.0"
   spec.summary      = "Submodoules"
 
   # This description is used to generate tags and improve search results.
@@ -181,7 +181,7 @@ Pod::Spec.new do |spec|
     ss.dependency 'TGSubmodoules/ObjCRuntimeUtils'
     ss.dependency 'TGSubmodoules/UIKitRuntimeUtils'
     ss.dependency 'TGSubmodoules/Markdown'
-    ss.dependency 'TGSwiftSignalKit', '~> 1.0.1'
+    ss.dependency 'SwiftSignalKitTG', '~> 1.1.2'
   end
 
 end

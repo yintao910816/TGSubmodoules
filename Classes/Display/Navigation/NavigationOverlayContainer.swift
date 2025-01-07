@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-import TGSwiftSignalKit
+import SwiftSignalKitTG
 
 final class NavigationOverlayContainer: ASDisplayNode {
     let controller: ViewController

@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-import TGSwiftSignalKit
+import SwiftSignalKitTG
 
 enum RootNavigationLayout {
     case split([ViewController], [ViewController])

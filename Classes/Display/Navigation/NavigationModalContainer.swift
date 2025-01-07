@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-import TGSwiftSignalKit
+import SwiftSignalKitTG
 //import UIKitRuntimeUtils
 
 final class NavigationModalContainer: ASDisplayNode, UIScrollViewDelegate, UIGestureRecognizerDelegate {

@@ -1,6 +1,6 @@
 import Foundation
 import UIKit
-import TGSwiftSignalKit
+import SwiftSignalKitTG
 
 public final class ListViewReorderingGestureRecognizer: UIGestureRecognizer {
     private let shouldBegin: (CGPoint) -> (allowed: Bool, requiresLongPress: Bool, itemNode: ListViewItemNode?)
@@ -10,8 +10,8 @@ public final class ListViewReorderingGestureRecognizer: UIGestureRecognizer {
     private let moved: (CGFloat) -> Void
     
     private var initialLocation: CGPoint?
-    private var longTapTimer: TGSwiftSignalKit.Timer?
-    private var longPressTimer: TGSwiftSignalKit.Timer?
+    private var longTapTimer: SwiftSignalKitTG.Timer?
+    private var longPressTimer: SwiftSignalKitTG.Timer?
     
     private var itemNode: ListViewItemNode?
     
@@ -32,7 +32,7 @@ public final class ListViewReorderingGestureRecognizer: UIGestureRecognizer {
     
     private func startLongTapTimer() {
         self.longTapTimer?.invalidate()
-        let longTapTimer = TGSwiftSignalKit.Timer(timeout: 0.25, repeat: false, completion: { [weak self] in
+        let longTapTimer = SwiftSignalKitTG.Timer(timeout: 0.25, repeat: false, completion: { [weak self] in
             self?.longTapTimerFired()
         }, queue: Queue.mainQueue())
         self.longTapTimer = longTapTimer
@@ -47,7 +47,7 @@ public final class ListViewReorderingGestureRecognizer: UIGestureRecognizer {
     
     private func startLongPressTimer() {
         self.longPressTimer?.invalidate()
-        let longPressTimer = TGSwiftSignalKit.Timer(timeout: 0.6, repeat: false, completion: { [weak self] in
+        let longPressTimer = SwiftSignalKitTG.Timer(timeout: 0.6, repeat: false, completion: { [weak self] in
             self?.longPressTimerFired()
         }, queue: Queue.mainQueue())
         self.longPressTimer = longPressTimer

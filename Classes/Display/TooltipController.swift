@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-import TGSwiftSignalKit
+import SwiftSignalKitTG
 
 public protocol TooltipControllerCustomContentNode: ASDisplayNode {
     func animateIn()
@@ -121,7 +121,7 @@ open class TooltipController: ViewController, StandalonePresentableController {
     private let dismissByTapOutside: Bool
     private let dismissByTapOutsideSource: Bool
     private let dismissImmediatelyOnLayoutUpdate: Bool
-    private var timeoutTimer: TGSwiftSignalKit.Timer?
+    private var timeoutTimer: SwiftSignalKitTG.Timer?
     
     private var padding: CGFloat
     private var innerPadding: UIEdgeInsets
@@ -204,7 +204,7 @@ open class TooltipController: ViewController, StandalonePresentableController {
     
     private func beginTimeout() {
         if self.timeoutTimer == nil {
-            let timeoutTimer = TGSwiftSignalKit.Timer(timeout: self.timeout, repeat: false, completion: { [weak self] in
+            let timeoutTimer = SwiftSignalKitTG.Timer(timeout: self.timeout, repeat: false, completion: { [weak self] in
                 if let strongSelf = self {
                     strongSelf.dismissed?(false)
                     strongSelf.controllerNode.animateOut {

@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-import TGSwiftSignalKit
+import SwiftSignalKitTG
 
 var testSpringFrictionLimits: (CGFloat, CGFloat) = (3.0, 60.0)
 var testSpringFriction: CGFloat = 31.8211269378662

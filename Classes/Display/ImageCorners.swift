@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 import CoreGraphics
-import TGSwiftSignalKit
+import SwiftSignalKitTG
 
 private enum Corner: Hashable {
     case TopLeft(Int), TopRight(Int), BottomLeft(Int), BottomRight(Int)

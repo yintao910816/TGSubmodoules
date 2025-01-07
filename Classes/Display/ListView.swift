@@ -1,6 +1,6 @@
 import UIKit
 
-import TGSwiftSignalKit
+import SwiftSignalKitTG
 //import UIKitRuntimeUtils
 //import ObjCRuntimeUtils
 
@@ -666,7 +666,7 @@ open class ListView: ASDisplayNode, UIScrollViewAccessibilityDelegate, UIGesture
         }
     }
     
-    private var itemReorderingTimer: TGSwiftSignalKit.Timer?
+    private var itemReorderingTimer: SwiftSignalKitTG.Timer?
     private var lastReorderingOffset: CGFloat?
     
     private func checkItemReordering(force: Bool = false) {
@@ -684,7 +684,7 @@ open class ListView: ASDisplayNode, UIScrollViewAccessibilityDelegate, UIGesture
         self.lastReorderingOffset = verticalTopOffset
         
         if !force {
-            self.itemReorderingTimer = TGSwiftSignalKit.Timer(timeout: 0.025, repeat: false, completion: { [weak self] in
+            self.itemReorderingTimer = SwiftSignalKitTG.Timer(timeout: 0.025, repeat: false, completion: { [weak self] in
                 self?.checkItemReordering(force: true)
             }, queue: Queue.mainQueue())
             self.itemReorderingTimer?.start()

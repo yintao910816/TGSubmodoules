@@ -1,6 +1,6 @@
 import Foundation
 import UIKit
-import TGSwiftSignalKit
+import SwiftSignalKitTG
 
 public func addAccessibilityChildren(of node: ASDisplayNode, container: Any, to list: inout [Any]) {
     if node.isAccessibilityElement {

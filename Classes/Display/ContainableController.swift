@@ -1,6 +1,6 @@
 import UIKit
 
-import TGSwiftSignalKit
+import SwiftSignalKitTG
 
 public protocol PresentableController: AnyObject {
     func viewDidAppear(completion: @escaping () -> Void)

@@ -1,6 +1,6 @@
 import UIKit
 
-import TGSwiftSignalKit
+import SwiftSignalKitTG
 
 private var backArrowImageCache: [Int32: UIImage] = [:]
 

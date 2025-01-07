@@ -1,5 +1,5 @@
 import UIKit
-import TGSwiftSignalKit
+import SwiftSignalKitTG
 
 public protocol StatusBarHost {
     var statusBarFrame: CGRect { get }

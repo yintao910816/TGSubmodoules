@@ -1,6 +1,6 @@
 import Foundation
 import UIKit
-import TGSwiftSignalKit
+import SwiftSignalKitTG
 
 public enum ListViewItemUpdateAnimation {
     case None

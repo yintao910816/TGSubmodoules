@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-import TGSwiftSignalKit
+import SwiftSignalKitTG
 
 public func isViewVisibleInHierarchy(_ view: UIView, _ initial: Bool = true) -> Bool {
     guard let window = view.window else {

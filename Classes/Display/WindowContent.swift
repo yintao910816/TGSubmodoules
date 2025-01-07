@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-import TGSwiftSignalKit
+import SwiftSignalKitTG
 
 private struct WindowLayout: Equatable {
     let size: CGSize
@@ -319,7 +319,7 @@ public class Window1 {
     private var keyboardGestureBeginLocation: CGPoint?
     private var keyboardGestureAccessoryHeight: CGFloat?
     
-    private var keyboardTypeChangeTimer: TGSwiftSignalKit.Timer?
+    private var keyboardTypeChangeTimer: SwiftSignalKitTG.Timer?
     
     private var isInteractionBlocked = false
     
@@ -620,7 +620,7 @@ public class Window1 {
                     }
                     
                     strongSelf.keyboardTypeChangeTimer?.invalidate()
-                    let timer = TGSwiftSignalKit.Timer(timeout: 0.1, repeat: false, completion: {
+                    let timer = SwiftSignalKitTG.Timer(timeout: 0.1, repeat: false, completion: {
                         if let strongSelf = self, let firstResponder = getFirstResponderAndAccessoryHeight(strongSelf.hostView.eventView).0 {
                             if firstResponder.textInputMode?.primaryLanguage != nil {
                                 return

@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-import TGSwiftSignalKit
+import SwiftSignalKitTG
 
 public final class NavigationContainer: ASDisplayNode, UIGestureRecognizerDelegate {
     private final class Child {
