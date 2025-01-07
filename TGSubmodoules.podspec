@@ -135,7 +135,7 @@ Pod::Spec.new do |spec|
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # spec.dependency "JSONKit", "~> 1.4"
 
-    spec.subspec 'AsyncDisplayKit' do |ss|
+  spec.subspec 'AsyncDisplayKit' do |ss|
     #单子模块引用需要把TGSubmodoules.h文件加进来
     ss.source_files = ['Classes/AsyncDisplayKit/**/*.{h,m,mm}', "Classes/TGSubmodoules.h"]
     ss.public_header_files = ['Classes/AsyncDisplayKit/PublicHeaders/*.h', "Classes/TGSubmodoules.h"]
