@@ -91,10 +91,10 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  #spec.source_files  = "Classes", "Classes/**/*.{h,m}"
+  # 这里的导入，需要pod中设置为 pod 'TGSubmodoules', :path => '../'，才会将主模块代码编译进去，单子模块会报错
+  spec.source_files  = "Classes/TGSubmodoules.h"
   #spec.exclude_files = "Classes/Exclude"
-
-  # spec.public_header_files = "Classes/**/*.h"
+  spec.public_header_files = "Classes/TGSubmodoules.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -135,10 +135,17 @@ Pod::Spec.new do |spec|
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # spec.dependency "JSONKit", "~> 1.4"
 
-  spec.subspec 'AsyncDisplayKit' do |ss|
-    ss.source_files = 'Classes/AsyncDisplayKit/**/*.{h,m}'
+    spec.subspec 'AsyncDisplayKit' do |ss|
+    #单子模块引用需要把TGSubmodoules.h文件加进来
+#    ss.source_files = ['Classes/AsyncDisplayKit/**/*.{h,m,mm}', "Classes/TGSubmodoules.h"]
+#    ss.public_header_files = ['Classes/AsyncDisplayKit/PublicHeaders/*.h', "Classes/TGSubmodoules.h"]
+    ss.source_files = 'Classes/AsyncDisplayKit/**/*.{h,m,mm}'
     ss.public_header_files = 'Classes/AsyncDisplayKit/PublicHeaders/*.h'
     ss.frameworks = "CoreGraphics", "CoreText", "CoreMedia", "QuartzCore", "UIKit", "Foundation"
+    # 为子模块单独设置 C++ 编译标志
+    ss.pod_target_xcconfig = {
+      'OTHER_CPLUSPLUSFLAGS' => '-DMINIMAL_ASDK'
+    }
   end
 
   spec.subspec 'PresentationData' do |ss|
@@ -150,22 +157,31 @@ Pod::Spec.new do |spec|
     ss.public_header_files = 'Classes/MurMurHash32/PublicHeaders/*.h'
   end
 
-  spec.subspec 'Display' do |ss|
-    ss.source_files = 'Classes/Display/*.swift'
-    ss.dependency 'TGSubmodoules/AsyncDisplayKit'
-  end
-
   spec.subspec 'ObjCRuntimeUtils' do |ss|
     ss.source_files = 'Classes/ObjCRuntimeUtils/**/*.{h,m}'
     ss.public_header_files = 'Classes/ObjCRuntimeUtils/PublicHeaders/*.h'
+    ss.frameworks = "UIKit", "Foundation"
   end
 
   spec.subspec 'UIKitRuntimeUtils' do |ss|
     ss.source_files = 'Classes/UIKitRuntimeUtils/**/*.{h,m}'
     ss.public_header_files = 'Classes/UIKitRuntimeUtils/PublicHeaders/*.h'
+    ss.frameworks = "UIKit", "Foundation"
     ss.dependency 'TGSubmodoules/AsyncDisplayKit'
     ss.dependency 'TGSubmodoules/ObjCRuntimeUtils'
+  end
 
+  spec.subspec 'Markdown' do |ss|
+    ss.source_files = 'Classes/Markdown/*.swift'
+  end
+
+  spec.subspec 'Display' do |ss|
+    ss.source_files = 'Classes/Display/**/*.swift'
+    ss.dependency 'TGSubmodoules/AsyncDisplayKit'
+    ss.dependency 'TGSubmodoules/ObjCRuntimeUtils'
+    ss.dependency 'TGSubmodoules/UIKitRuntimeUtils'
+    ss.dependency 'TGSubmodoules/Markdown'
+    ss.dependency 'TGSwiftSignalKit', '~> 1.0.1'
   end
 
 end

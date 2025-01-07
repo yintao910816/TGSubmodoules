@@ -4,9 +4,15 @@ target 'TGSubmodoulesDemo' do
 
   use_frameworks!
 
-#  pod 'TGSubmodoules/Display', :path => '../'
+  pod 'TGSwiftSignalKit', '~> 1.0.1'
+
+#  pod 'TGSubmodoules/AsyncDisplayKit', :path => '../'
 #  pod 'TGSubmodoules/PresentationData', :path => '../'
+#  pod 'TGSubmodoules/MurMurHash32', :path => '../'
+#  pod 'TGSubmodoules/ObjCRuntimeUtils', :path => '../'
 #  pod 'TGSubmodoules/UIKitRuntimeUtils', :path => '../'
+#  pod 'TGSubmodoules/Markdown', :path => '../'
+#  pod 'TGSubmodoules/Display', :path => '../'
   pod 'TGSubmodoules', :path => '../'
 
 end
